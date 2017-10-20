@@ -3,14 +3,14 @@
 from setuptools import setup, find_packages
 
 setup(
-        name             = 'gaccho_twitter',
+        name             = 'gaccho_rss',
         version          = '0.0.1',
-        description      = 'Gaccho Twitter Plugin',
+        description      = 'Gaccho Rss Feed Plugin',
         license          = 'MIT',
         author           = 'nobiki',
         author_email     = 'test@example.com',
-        url              = 'https://github.com/nobiki/gaccho_twitter.git',
-        keywords         = 'gaccho twitter',
+        url              = 'https://github.com/nobiki/gaccho_rss.git',
+        keywords         = 'gaccho rss',
         packages         = find_packages(),
         install_requires = [],
         )
