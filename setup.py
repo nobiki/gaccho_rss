@@ -12,6 +12,8 @@ setup(
         url              = 'https://github.com/nobiki/gaccho_rss.git',
         keywords         = 'gaccho rss',
         packages         = find_packages(),
-        install_requires = [],
+        install_requires = [
+            "feedparser==5.2.1",
+            ],
         )
 
