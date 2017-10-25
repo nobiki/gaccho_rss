@@ -16,7 +16,7 @@ class Rss(Article.Article):
         for i in range(len(feed.entries)):
             published = datetime.fromtimestamp(mktime(feed.entries[i].published_parsed))
             title = feed.entries[i].title
-            ret.append(("Rss", title, str(published)))
+            value = feed.entries[i]["content"][0]["value"]
+            ret.append(("Rss", title, str(published), value))
 
-        print(ret)
         return ret
