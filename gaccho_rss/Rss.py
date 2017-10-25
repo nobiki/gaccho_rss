@@ -1,10 +1,10 @@
-import Article
+from Article import Article
 
 import feedparser
 from datetime import datetime
 from time import mktime
 
-class Rss(Article.Article):
+class Rss(Article):
     def color_pair(self):
         return {"text":"WHITE", "back":"GREEN"}
 
