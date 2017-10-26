@@ -17,6 +17,7 @@ class Rss(Article):
             published = datetime.fromtimestamp(mktime(feed.entries[i].published_parsed))
             title = feed.entries[i].title
             value = feed.entries[i]["content"][0]["value"]
-            ret.append(("Rss", title, str(published), self.strip_tags(value)))
+            author = feed.entries[i]["author"]["name"]
+            ret.append(("Rss", str(published), author, title, self.strip_tags(value)))
 
         return ret
