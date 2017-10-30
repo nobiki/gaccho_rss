@@ -19,6 +19,6 @@ class Rss(Article):
             url = feed.entries[i].url
             value = feed.entries[i].title+"\n\n"+feed.entries[i]["content"][0]["value"]
             author = feed.entries[i].author
-            ret.append(("Rss", str(published), author, self.strip_tags(value)))
+            ret.append(("Rss", str(published), author, title, url, self.strip_tags(value)))
 
         return ret
