@@ -6,7 +6,7 @@ from time import mktime
 
 class Rss(Article):
     def color_pair(self):
-        return {"text":"WHITE", "back":"GREEN"}
+        return {"color_text":"WHITE", "color_back":"GREEN"}
 
     def get(self):
         feed = feedparser.parse("https://qiita.com/tags/Docker/feed.atom")
