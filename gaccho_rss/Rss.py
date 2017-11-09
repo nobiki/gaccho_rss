@@ -41,7 +41,7 @@ class Rss(Article):
                     author = feed.entries[i].author
                     ret.append(("Rss", str(published), author, title, link, self.strip_tags(value)))
 
-        self.cache_save("cache/Rss")
+        self.cache_save("cache/Rss", ret)
 
         return ret
 
