@@ -40,7 +40,7 @@ class Rss(Article):
                     link = feed.entries[i].link
                     value = feed.entries[i]["content"][0]["value"]
                     author = feed.entries[i].author
-                    ret.append((name, str(published), author, title, link, self.strip_tags(value)))
+                    ret.append(("Rss", name, str(published), author, title, link, self.strip_tags(value)))
 
         self.cache_save("cache/Rss", ret)
 
