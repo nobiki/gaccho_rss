@@ -34,12 +34,13 @@ class Rss(Article):
                 feed = feedparser.parse(url)
 
                 for i in range(len(feed.entries)):
+                    name = feed.title
                     published = datetime.fromtimestamp(mktime(feed.entries[i].published_parsed))
                     title = feed.entries[i].title
                     link = feed.entries[i].link
                     value = feed.entries[i]["content"][0]["value"]
                     author = feed.entries[i].author
-                    ret.append(("Rss", str(published), author, title, link, self.strip_tags(value)))
+                    ret.append((name, str(published), author, title, link, self.strip_tags(value)))
 
         self.cache_save("cache/Rss", ret)
 
