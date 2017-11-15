@@ -34,7 +34,7 @@ class Rss(Article):
                 feed = feedparser.parse(url)
 
                 for i in range(len(feed.entries)):
-                    name = feed.title
+                    name = feed.feed.title
                     published = datetime.fromtimestamp(mktime(feed.entries[i].published_parsed))
                     title = feed.entries[i].title
                     link = feed.entries[i].link
@@ -45,4 +45,3 @@ class Rss(Article):
         self.cache_save("cache/Rss", ret)
 
         return ret
-
