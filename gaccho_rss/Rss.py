@@ -13,12 +13,9 @@ class Rss(Article):
         return {"color_text":"WHITE", "color_back":"GREEN"}
 
     def get(self):
-        ret = []
-
         ## load config
         self.config = configparser.ConfigParser()
         self.config.read("gaccho.ini")
-        feeds = dict(self.config["Rss"])
 
         regex = re.compile(
                 r'^(?:http|ftp)s?://' # http:// or https://
@@ -28,19 +25,27 @@ class Rss(Article):
                 r'(?::\d+)?' # optional port
                 r'(?:/?|[/?]\S+)$', re.IGNORECASE)
 
-        for url in feeds["feeds"].split("\n"):
-            if regex.search(url):
+        ret = []
+        for c in enumerate(self.config):
+            if "type" in self.config[c[1]] and "Rss" == self.config[c[1]]["type"]:
+                item = c[1]
 
-                feed = feedparser.parse(url)
+                feeds = dict(self.config[item])
 
-                for i in range(len(feed.entries)):
-                    name = feed.feed.title
-                    published = datetime.fromtimestamp(mktime(feed.entries[i].published_parsed))
-                    title = feed.entries[i].title
-                    link = feed.entries[i].link
-                    value = feed.entries[i]["content"][0]["value"]
-                    author = feed.entries[i].author
-                    ret.append(("Rss", name, str(published), author, title, link, self.strip_tags(value)))
+                for url in feeds["feeds"].split("\n"):
+                    if regex.search(url):
+
+                        feed = feedparser.parse(url)
+
+                        for i in range(len(feed.entries)):
+                            name = feed.feed.title
+                            published = datetime.fromtimestamp(mktime(feed.entries[i].published_parsed))
+                            title = feed.entries[i].title
+                            link = feed.entries[i].link
+                            value = feed.entries[i]["content"][0]["value"]
+                            author = feed.entries[i].author
+                            ret.append((item, name, str(published), author, title, link, self.strip_tags(value)))
+
 
         self.cache_save("cache/Rss", ret)
 
