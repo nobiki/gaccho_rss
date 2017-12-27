@@ -48,7 +48,7 @@ feeds:
 * [Rss] (optional):  
 Common setting concerning "type = Rss"
 
-* interval (required)  
+* interval (optional)  
 Set the retention period of the local cache in minutes. (default: 60 minutes)
 
 ```
