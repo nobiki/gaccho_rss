@@ -4,7 +4,9 @@ Plug-in for subscribing to RSS feed at [gaccho](https://github.com/nobiki/gaccho
 
 ## Setup
 
-#### section FeedName [gaccho.ini]
+Setting of "gaccho.ini"
+
+#### [FeedName] Section.
 
 * [FeedName] (required):  
 The section name displayed in the list.  
@@ -41,7 +43,7 @@ feeds:
 
 ```
 
-#### section Rss [gaccho.ini]
+#### [Rss] Section
 
 * [Rss] (optional):  
 Common setting concerning "type = Rss"
