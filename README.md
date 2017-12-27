@@ -5,8 +5,6 @@ Plug-in for subscribing to RSS feed at [gaccho](https://github.com/nobiki/gaccho
 #### setup [gaccho.ini]
 
 * color_text (optional):  
-[default](https://github.com/nobiki/gaccho_rss/blob/0.0.3/gaccho_rss/Rss.py#L13)  
-
 * color_back (optional):  
 [default](https://github.com/nobiki/gaccho_rss/blob/0.0.3/gaccho_rss/Rss.py#L13)  
 
