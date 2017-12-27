@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
         name             = 'gaccho_rss',
-        version          = '0.0.3',
+        version          = '0.1',
         description      = 'Gaccho Rss Feed Plugin',
         license          = 'MIT',
         author           = 'nobiki',
