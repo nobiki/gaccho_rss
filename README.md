@@ -8,7 +8,7 @@ Setting of "gaccho.ini"
 
 #### [FeedName] Section.
 
-* [FeedName] (required):  
+* [FeedName] (required)  
 The section name displayed in the list.  
 "FeedName" is an arbitrary character string set with 8 bytes  
 Common setting of `type = Rss` is set in the [Rss] section
@@ -45,10 +45,10 @@ feeds:
 
 #### [Rss] Section
 
-* [Rss] (optional):  
+* [Rss] (optional)  
 Common setting concerning "type = Rss"
 
-* interval (optional)  
+* interval (optional):  
 Set the retention period of the local cache in minutes. (default: 60 minutes)
 
 ```
