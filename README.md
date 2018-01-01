@@ -16,8 +16,8 @@ Common setting of `type = Rss` is set in the [Rss] section
 * type (required)  
 Set "Rss".
 
-* color_text (optional): [default](https://github.com/nobiki/gaccho_rss/blob/0.0.3/gaccho_rss/Rss.py#L13)
-* color_back (optional): [default](https://github.com/nobiki/gaccho_rss/blob/0.0.3/gaccho_rss/Rss.py#L13)
+* color_text (optional): [default](https://github.com/nobiki/gaccho_rss/blob/0.1/gaccho_rss/Rss.py#L13)
+* color_back (optional): [default](https://github.com/nobiki/gaccho_rss/blob/0.1/gaccho_rss/Rss.py#L13)
 
 * feeds (optional)  
 Set feeds to subscribe by line break separator.
