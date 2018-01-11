@@ -49,9 +49,11 @@ class Rss(Article):
 
         return ret
 
-    def controll(self, key, win):
+    def controll(self, *args):
+        ret = {}
 
-        if self.key_pair == "" and key == ord("y"):
-            self.key_trigger = "test"
-            self.key_pair = ""
+        if args["key_pair"] == "" and args["key"] == ord("y"):
+            ret["key_trigger"] = "test"
+            ret["key_pair"] = ""
 
+        return ret
