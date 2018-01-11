@@ -49,6 +49,6 @@ class Rss(Article):
 
         return ret
 
-    def controll(self):
+    def controll(self, key, win):
         pass
 
