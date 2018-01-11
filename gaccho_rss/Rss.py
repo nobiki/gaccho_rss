@@ -48,3 +48,7 @@ class Rss(Article):
         self.cache_save("cache/Rss", ret)
 
         return ret
+
+    def controll(self):
+        pass
+
