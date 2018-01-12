@@ -50,9 +50,6 @@ class Rss(Article):
         return ret
 
     def controll(self, **keywords):
-        ret = {"key_trigger":"","key_pair":""}
-
-        if keywords["key_pair"] == "" and keywords["key"] == ord("y"):
-            ret["key_trigger"] = "test"
+        ret = {"key_trigger":keywords["key_trigger"],"key_pair":keywords["key_pair"]}
 
         return ret
