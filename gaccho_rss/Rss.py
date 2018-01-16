@@ -50,6 +50,6 @@ class Rss(Article):
         return ret
 
     def controll(self, **keywords):
-        ret = {"key_trigger":"","key_pair":keywords["key_pair"]}
+        ret = {"key_trigger":keywords["key_trigger"],"key_pair":keywords["key_pair"]}
 
         return ret
