@@ -40,8 +40,18 @@ class Rss(Article):
                                 published = datetime.fromtimestamp(mktime(feed.entries[i].published_parsed))
                                 title = feed.entries[i].title
                                 link = feed.entries[i].link
-                                value = feed.entries[i]["content"][0]["value"]
-                                author = feed.entries[i].author
+
+                                if "content" in feed.entries[i]:
+                                    value = feed.entries[i]["content"][0]["value"]
+                                elif "summary" in feed.entries[i]:
+                                    value = feed.entries[i].summary
+                                else:
+                                    value = ""
+
+                                if "author" in feed.entries[i]:
+                                    author = feed.entries[i].author
+                                else:
+                                    author = ""
                                 ret.append((item, name, str(published), author, title, link, self.strip_tags(value)))
 
 
